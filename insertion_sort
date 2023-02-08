@@ -1,0 +1,14 @@
+a = [8, 3, 17, 9, 6, 4]
+n = len(a)
+print('I have a list, which looks like this:', *a)
+print()
+
+for run in range(n - 1):
+    print('Sorting this list:', a[:n-run])
+    big = max(a[:n-run])
+    i = a.index(big)
+    if a[i] != a[n-1-run]:
+        a[i], a[n-1-run] = a[n-1-run], a[i]
+        print('Well, I have to change', a[i], 'with', a[n-1-run])
+        print('Now the list looks like this:', *a)
+        print()
